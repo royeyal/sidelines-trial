@@ -9,7 +9,7 @@
 	"attributes": {
 		"message": {
 			"type": "string",
-			"default": "Data will apear here on the front-end."
+			"default": "Data will appear here on the front-end."
 		}
 	},
 	"example": {
