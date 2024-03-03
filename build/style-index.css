@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .wp-block-gutenberg-examples-dynamic-block {
     background-color: #971c1f;
     color: #fff;
 }
+
 .row {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -10,22 +13,50 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    max-width: 64rem;
+    max-width: 21rem;
     gap: 5%;
     padding: 1.5rem;
     border-radius: 1rem;
     direction: ltr;
+    background-color: #fff;
 }
 #sidelines h3 {
-    color: #fff;
+    color: inherit;
     margin: 0;
-    line-height: 1.5em;
+    line-height: 1.6em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0C1025;
 }
-@media screen and (min-width: 871px) {
-    #sidelinesCrews,
-    #sidelinesCredits {
-        text-align: right;
-    }
+
+#sidelines img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 10px;
+}
+
+#sidelines .item {
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+    margin-bottom: 1rem;
+}
+
+#sidelines p,
+#sidelines span {
+    margin: 0;
+    color: #B5C6FF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+#sidelines p {
+    font-weight: 500;
 }
