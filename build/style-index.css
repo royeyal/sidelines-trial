@@ -60,3 +60,7 @@
 #sidelines p {
     font-weight: 500;
 }
+
+.page .msgSidelines {
+    display: none;
+}
