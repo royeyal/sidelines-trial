@@ -3,18 +3,18 @@
 	"apiVersion": 2,
 	"name": "gutenberg-examples/dynamic-block",
 	"version": "0.1.0",
-	"title": "Star Wars Starships",
+	"title": "Sidelines Data",
 	"category": "text",
 	"icon": "airplane",
 	"attributes": {
 		"message": {
 			"type": "string",
-			"default": "Starships will apear here on the front-end."
+			"default": "Data will apear here on the front-end."
 		}
 	},
 	"example": {
 		"attributes": {
-			"message": "Deep Space Mobile Battlestation"
+			"message": "First Look at 2024-25 College Football Championship Futures Odds"
 		}
 	},
 	"supports": {

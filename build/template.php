@@ -8,18 +8,18 @@
  */
 ?>
 <div
-	id="starships"
+	id="sidelines"
 	<?php echo get_block_wrapper_attributes(); ?>>
-	<div id="starshipName" class="row">
+	<div id="sidelinesName" class="row">
 		<h3>Name</h3>
 	</div>
-	<div id="starshipClass" class="row">
+	<div id="sidelinesClass" class="row">
 		<h3>Class</h3>
 	</div>
-	<div id="starshipCrews" class="row">
+	<div id="sidelinesCrews" class="row">
 		<h3>Crews</h3>
 	</div>
-	<div id="starshipCredits" class="row">
+	<div id="sidelinesCredits" class="row">
 		<h3>Credits</h3>
 	</div>
 
@@ -35,17 +35,17 @@
 	?>
 </div>
 <script>
-//console.log( "I'm loaded!" );
+console.log( "I'm loaded!" );
 
-let starshipNames = document.getElementById("starshipName");
-let starshipClasses = document.getElementById("starshipClass");
-let starshipCrews = document.getElementById("starshipCrews");
-let starshipCredits = document.getElementById("starshipCredits");
+let sidelinesNames = document.getElementById("sidelinesName");
+let sidelinesClasses = document.getElementById("sidelinesClass");
+let sidelinesCrews = document.getElementById("sidelinesCrews");
+let sidelinesCredits = document.getElementById("sidelinesCredits");
 
 let promise1 = new Promise(function (resolve, reject) {
 	let xhr = new XMLHttpRequest(),
 		method = "GET",
-		url = "https://swapi.dev/api/starships/";
+		url = "https://336e1140-02c8-4b86-9ce2-bf4f0c8ed910.mock.pstmn.io/articles";
 
 	xhr.open(method, url, true);
 	xhr.onreadystatechange = function () {
@@ -58,18 +58,18 @@ let promise1 = new Promise(function (resolve, reject) {
 });
 
 promise1.then(function (value) {
-	for (let starshipName in value.results) {
-		starshipNames.innerHTML += `<div class="item">${value.results[starshipName].name}</div>`;
+	for (let sidelinesName in value.results) {
+		sidelinesNames.innerHTML += `<div class="item">${value.results[sidelinesName].author}</div>`;
 	}
-	for (let starshipClass in value.results) {
-		starshipClasses.innerHTML += `<div class="item">${value.results[starshipClass].starship_class}</div>`;
+	for (let sidelinesClass in value.results) {
+		sidelinesClasses.innerHTML += `<div class="item">${value.results[sidelinesClass].title}</div>`;
 	}
-	for (let starshipCrew in value.results) {
-		starshipCrews.innerHTML += `<div class="item">${value.results[starshipCrew].crew}</div>`;
+	for (let sidelinesCrew in value.results) {
+		sidelinesCrews.innerHTML += `<div class="item">${value.results[sidelinesCrew].publishedAt}</div>`;
 	}
-	for (let starshipCredit in value.results) {
-		starshipCredits.innerHTML += `<div class="item">${value.results[starshipCredit].cost_in_credits}</div>`;
+	for (let sidelinesCredit in value.results) {
+		sidelinesCredits.innerHTML += `<div class="item">${value.results[sidelinesCredit].id}</div>`;
 	}
-	//console.log(value);
+	console.log(value);
 });
 </script>
