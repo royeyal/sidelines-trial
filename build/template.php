@@ -54,14 +54,14 @@ promise1.then(function (value) {
 		//console.log(value[i].author);
 	}
 	
-	//console.log(value);
-	//console.log(indexArticles);
-	//sidelinesData.innerHTML += `<button id="btn">Load more</button>`;
+	console.log(value);
+	console.log(indexArticles);
+	
 	const button = document.getElementById("btn");
 
 	button.addEventListener("click", (event) => {
-		//console.log(indexArticles);
-		if (indexArticles < numArticles) {
+		console.log(indexArticles);
+		if (indexArticles <= numArticles) {
 			indexArticles++;
 			sidelinesData.innerHTML += `<div class="item"><img src="${value[indexArticles].urlToImage}" /><div class="article-sidelines"><p class="sidelines-author">${value[indexArticles].author}</p><h3 class="sidelines-title">${value[indexArticles].title}</h3><span class="sidelines-publishedAt">${value[indexArticles].publishedAt}</span></div></div>`;
 		}
