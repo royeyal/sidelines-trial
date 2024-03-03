@@ -6,7 +6,7 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-#starships {
+#sidelines {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -18,14 +18,14 @@
     border-radius: 1rem;
     direction: ltr;
 }
-#starships h3 {
+#sidelines h3 {
     color: #fff;
     margin: 0;
     line-height: 1.5em;
 }
 @media screen and (min-width: 871px) {
-    #starshipCrews,
-    #starshipCredits {
+    #sidelinesCrews,
+    #sidelinesCredits {
         text-align: right;
     }
 }
