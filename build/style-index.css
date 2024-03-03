@@ -1,0 +1,31 @@
+.wp-block-gutenberg-examples-dynamic-block {
+    background-color: #971c1f;
+    color: #fff;
+}
+.row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#starships {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 64rem;
+    gap: 5%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    direction: ltr;
+}
+#starships h3 {
+    color: #fff;
+    margin: 0;
+    line-height: 1.5em;
+}
+@media screen and (min-width: 871px) {
+    #starshipCrews,
+    #starshipCredits {
+        text-align: right;
+    }
+}

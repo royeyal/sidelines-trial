@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "gutenberg-examples/dynamic-block",
+	"version": "0.1.0",
+	"title": "Star Wars Starships",
+	"category": "text",
+	"icon": "airplane",
+	"attributes": {
+		"message": {
+			"type": "string",
+			"default": "Starships will apear here on the front-end."
+		}
+	},
+	"example": {
+		"attributes": {
+			"message": "Deep Space Mobile Battlestation"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "dynamic-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
