@@ -11,8 +11,9 @@
 	id="sidelines"
 	<?php echo get_block_wrapper_attributes(); ?>>
 	<div id="sidelinesName" class="row">
-	<button id="btn">Load more</button>
+	
 	</div>
+	<button id="btn">Load more</button>
 
 	<?php
 	if ( isset( $attributes['message'] ) ) {
@@ -56,11 +57,19 @@ promise1.then(function (value) {
 	//console.log(value);
 	//console.log(indexArticles);
 	//sidelinesData.innerHTML += `<button id="btn">Load more</button>`;
-	let btn_element = document.getElementById("btn");
-	btn_element.addEventListener("click", () => {
-		indexArticles++;
-		console.log(indexArticles);
-		sidelinesData.innerHTML += `<div class="item"><img src="${value[indexArticles].urlToImage}" /><div class="article-sidelines"><p class="sidelines-author">${value[indexArticles].author}</p><h3 class="sidelines-title">${value[indexArticles].title}</h3><span class="sidelines-publishedAt">${value[indexArticles].publishedAt}</span></div></div>`;
-    });
+	const button = document.getElementById("btn");
+
+	button.addEventListener("click", (event) => {
+		//console.log(indexArticles);
+		if (indexArticles < numArticles) {
+			indexArticles++;
+			sidelinesData.innerHTML += `<div class="item"><img src="${value[indexArticles].urlToImage}" /><div class="article-sidelines"><p class="sidelines-author">${value[indexArticles].author}</p><h3 class="sidelines-title">${value[indexArticles].title}</h3><span class="sidelines-publishedAt">${value[indexArticles].publishedAt}</span></div></div>`;
+		}
+		else {
+			return;
+		}
+	});
+
+	
 });
 </script>
