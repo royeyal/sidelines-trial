@@ -58,18 +58,16 @@ let promise1 = new Promise(function (resolve, reject) {
 });
 
 promise1.then(function (value) {
-	for (let sidelinesName in value.results) {
-		sidelinesNames.innerHTML += `<div class="item">${value.results[sidelinesName].author}</div>`;
+	for (var i = 0; i < value.length; i++) {
+		sidelinesNames.innerHTML += `<div class="item">`;
+		sidelinesNames.innerHTML += `<img src="${value[i].urlToImage}" />`;
+		sidelinesNames.innerHTML += `<div class="item">${value[i].author}</div>`;
+		sidelinesNames.innerHTML += `<div class="item">${value[i].title}</div>`;
+		sidelinesNames.innerHTML += `<div class="item">${value[i].publishedAt}</div>`;
+		sidelinesNames.innerHTML += `</div>`;
+		//console.log(value[i].author);
 	}
-	for (let sidelinesClass in value.results) {
-		sidelinesClasses.innerHTML += `<div class="item">${value.results[sidelinesClass].title}</div>`;
-	}
-	for (let sidelinesCrew in value.results) {
-		sidelinesCrews.innerHTML += `<div class="item">${value.results[sidelinesCrew].publishedAt}</div>`;
-	}
-	for (let sidelinesCredit in value.results) {
-		sidelinesCredits.innerHTML += `<div class="item">${value.results[sidelinesCredit].id}</div>`;
-	}
+	
 	console.log(value);
 });
 </script>
