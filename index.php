@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Star Wars Starships
+ * Plugin Name: Sidelines data
  * Plugin URI: https://github.com/royeyal/sidelines-trial
- * Description: Use the Star Wars Starships block to retrieve data from the Star Wars API.
+ * Description: Use the Sidelines block to retrieve article data.
  * Version: 1.0.0
  * Author: Roy Eyal
  * Author URI: https://royeyal.com
