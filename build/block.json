@@ -9,7 +9,7 @@
 	"attributes": {
 		"message": {
 			"type": "string",
-			"default": "[Data will appear here on the front-end]"
+			"default": "<span class='msgSidelines'>[Data will appear here on the front-end]</span>"
 		}
 	},
 	"example": {
