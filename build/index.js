@@ -5,7 +5,7 @@
 			741: function () {
 				var e = window.wp.blocks,
 					t = JSON.parse(
-						'{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"gutenberg-examples/dynamic-block","version":"0.1.0","title":"Example: Dynamic Block (ESNext)","category":"text","icon":"universal-access-alt","attributes":{"message":{"type":"string","default":"Hello from a dynamic block!"}},"example":{"attributes":{"message":"Example Dynamic Block"}},"supports":{"html":false},"textdomain":"dynamic-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}'
+						'{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"gutenberg-examples/dynamic-block-02","version":"0.1.1","title":"Example: Dynamic Block (ESNext)","category":"text","icon":"universal-access-alt","attributes":{"message":{"type":"string","default":"Hello from a dynamic block!"}},"example":{"attributes":{"message":"Example Dynamic Block"}},"supports":{"html":false},"textdomain":"dynamic-block-02","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}'
 					);
 				function n() {
 					return (
