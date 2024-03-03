@@ -11,6 +11,7 @@
 	id="sidelines"
 	<?php echo get_block_wrapper_attributes(); ?>>
 	<div id="sidelinesName" class="row">
+	<button id="btn">Load more</button>
 	</div>
 
 	<?php
@@ -45,11 +46,21 @@ let promise1 = new Promise(function (resolve, reject) {
 });
 
 promise1.then(function (value) {
-	for (var i = 0; i < value.length; i++) {
-		sidelinesData.innerHTML += `<div class="item"><img src="${value[i].urlToImage}" /><div class="article-sidelines"><p class="sidelines-author">${value[i].author}</p><h3 class="sidelines-title">${value[i].title}</h3><span class="sidelines-publishedAt">${value[i].publishedAt}</span></div></div>`;
+	let numArticles = value.length;
+	let indexArticles = 0;
+	for (indexArticles = 0; indexArticles < 4; indexArticles++) {
+		sidelinesData.innerHTML += `<div class="item"><img src="${value[indexArticles].urlToImage}" /><div class="article-sidelines"><p class="sidelines-author">${value[indexArticles].author}</p><h3 class="sidelines-title">${value[indexArticles].title}</h3><span class="sidelines-publishedAt">${value[indexArticles].publishedAt}</span></div></div>`;
 		//console.log(value[i].author);
 	}
 	
 	//console.log(value);
+	//console.log(indexArticles);
+	//sidelinesData.innerHTML += `<button id="btn">Load more</button>`;
+	let btn_element = document.getElementById("btn");
+	btn_element.addEventListener("click", () => {
+		indexArticles++;
+		console.log(indexArticles);
+		sidelinesData.innerHTML += `<div class="item"><img src="${value[indexArticles].urlToImage}" /><div class="article-sidelines"><p class="sidelines-author">${value[indexArticles].author}</p><h3 class="sidelines-title">${value[indexArticles].title}</h3><span class="sidelines-publishedAt">${value[indexArticles].publishedAt}</span></div></div>`;
+    });
 });
 </script>
