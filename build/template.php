@@ -13,7 +13,7 @@
 	<div id="sidelinesName" class="row">
 	
 	</div>
-	<button id="btn">Load more</button>
+	<button id="btn">Read More</button>
 
 	<?php
 	if ( isset( $attributes['message'] ) ) {
@@ -66,6 +66,7 @@ promise1.then(function (value) {
 			sidelinesData.innerHTML += `<div class="item"><img src="${value[indexArticles].urlToImage}" /><div class="article-sidelines"><p class="sidelines-author">${value[indexArticles].author}</p><h3 class="sidelines-title">${value[indexArticles].title}</h3><span class="sidelines-publishedAt">${value[indexArticles].publishedAt}</span></div></div>`;
 		}
 		else {
+			document.getElementById("btn").innerHTML = "No more articles";
 			return;
 		}
 	});
